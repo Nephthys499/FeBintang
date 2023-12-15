@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+.Homebage {
+  background-color: rgb(118, 167, 70);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box1 {
+  /* -border: 2px solid red; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80vw;
+  height: 80vh;
+  background-color: white;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02), 6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028), 12.5px 12.5px 10px rgba(0, 0, 0, 0.035), 22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042), 41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+    100px 100px 80px rgba(0, 0, 0, 0.07);
+
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: small;
+}
+
+.span1 {
+  font-size: small;
+  font-weight: bold;
+  color: rgb(135, 211, 59);
+}
+
+.logosekolahkarangjengkol {
+  height: 18vh;
+  width: 45vw;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.Row {
+  border: 2px solid red;
+}
+
+.kolom1 {
+  border: 2px solid red;
+}
+.kolom2 {
+  border: 2px solid red;
+}
+
+@media only screen and (min-width: 600px) {
+  .logosekolahkarangjengkol {
+    height: 19vh;
+    width: 15vw;
+  }
+}

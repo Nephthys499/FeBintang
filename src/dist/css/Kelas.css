@@ -1,0 +1,521 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    background-color: #fff;
+  }
+  
+  link[rel="icon"] {
+    border-radius: 100%;
+  }
+  .navbar1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 7%;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+  }
+  .kiri {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .kiri .text {
+    display: flex;
+    flex-wrap: wrap;
+    width: 9rem;
+    text-align: center;
+    margin-right: 7rem;
+  }
+  .kiri .text h1 {
+    font-size: medium;
+  }
+  
+  .kiri .navbar-logo1 {
+    height: 100%;
+    padding-right: 1rem;
+  }
+  .kiri .navbar-logo1 img {
+    width: 2rem;
+    height: 2.3rem;
+  }
+  .navbar1 .kiri .navbar-nav1 a {
+    display: inline-block;
+    font-size: 1.1rem;
+    margin: 0 1rem;
+  }
+  
+  .navbar1 .navbar-extra1 {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar1 .navbar-extra1 img {
+    width: 36px;
+    height: 52px;
+  }
+  .navbar1 .navbar-extra1 a {
+    padding: 0.5rem;
+    margin: 0.2rem;
+  }
+  
+  .myswipercrosel {
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin-top: 7rem;
+    color: #000000;
+  }
+  .crousel-landing {
+    display: flex;
+    align-items: center;
+    margin: 3rem 3rem;
+  }
+  
+  
+  @media (min-width: 1028px) {
+    .containerbox{
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+      align-items: center;
+      padding-top: 0.5rem;
+      width: auto;
+      height: 50vh;
+    }
+    .containerleader {
+      width: 80vw;
+      height: 50vh;
+  
+      display: flex;
+      justify-content: space-around;
+      margin-top: 1rem;
+      align-items: center;
+      padding-top: 0.5rem;
+      border-radius: 10px;
+    }
+    .containerleader .orangkiri {
+      flex-direction: column;
+      margin-left: 1rem;
+      margin-top: 1.3rem;
+      margin-bottom: 1rem;
+    }
+    .containerleader .orangkanan {
+      flex-direction: column;
+      margin-right: 1rem;
+      margin-top: 1.3rem;
+      margin-bottom: 1rem;
+      display: flex;
+  
+      right: 0;
+      justify-content: end;
+    }
+    .containerleader .container2 {
+      border-radius: 15px;
+      background: #75cda8;
+  
+      height: 3rem;
+      display: flex;
+      align-items: center;
+      padding-top: 0.2rem;
+      padding-bottom: 0.2rem;
+      margin-bottom: 1.2rem;
+    }
+    .containerleader  .container2 .profile {
+      width:3rem;
+      height: 3rem;
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+    }
+  
+    .containerleader .container2 .profile img {
+      width: 3rem;
+      height: 3rem;
+      position: absolute;
+  
+      border-radius: 50%;
+    }
+    .containerleader .container2 .nama {
+      display: flex;
+  
+      height: 2.2rem;
+  
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border-radius: 10px;
+      background: #fbfbfb;
+      margin-right: 0.2rem;
+    }
+    .containerleader .container2 .nama h1 {
+      font-family: Poppins;
+      font-size: 20px;
+      font-style: oblique;
+      font-weight: 500;
+      line-height: normal;
+      color: #000000;
+    }
+    .containerleader .gambartengah {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 20vw;
+      height: 24vh;
+    }
+    .containerleader .gambartengah img {
+      position: absolute;
+      width: 20vw;
+      height: 24vh;
+    }
+    .containerleader .orangkanan .container2 {
+      flex-direction: row-reverse;
+      align-items: center;
+      right: 0;
+    }
+    .containerleader .orangkanan .container2 .nama {
+      margin-right: 0rem;
+      margin-left: 0.2rem;
+      align-items: center;
+      display: flex;
+    }
+    .containerleader .orangkanan .container2 .profile {
+      margin-left: 0.2rem;
+      margin-right: 0.5rem;
+    }
+  
+    .s-box1 {
+      width: 20rem;
+    }
+    .s-box1 .nama {
+      width: 18rem;
+    }
+    .s-box2 {
+      width: 20rem;
+    }
+    .s-box2 .nama {
+      width: 18rem;
+    }
+    .s-box3 {
+      width: 20rem;
+    }
+    .s-box3 .nama {
+      width: 18rem;
+    }
+    .s-box4 {
+      width: 20rem;
+    }
+    .s-box4 .nama {
+      width: 18rem;
+    }
+    .s-box5 {
+      width: 20rem;
+    }
+    .s-box5 .nama {
+      width: 18rem;
+    }
+  
+    .box-1 {
+      width: 20rem;
+    }
+    .box-1 .nama {
+      width: 18rem;
+    }
+    .box-2 {
+      width: 20rem;
+     
+    }
+    .box-2 .nama {
+      width: 18rem;
+    }
+    .box-3 {
+      width: 20rem;
+   
+    }
+    .box-3 .nama {
+      width: 18rem;
+    }
+    .box-4 {
+      width: 20rem;
+      
+    }
+    .box-4 .nama {
+      width: 18rem;
+    }
+    .box-5 {
+      width: 20rem;
+    }
+    .box-5 .nama {
+      width: 18rem;
+    }
+    .SwiperSlide img {
+      width: 80vw;
+      height: 20vh;
+    }
+    .swiper {
+      width: 200vw;
+      height: 50vh;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      gap: 10px;
+    }
+    
+    .mySwiper.swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 200vw;
+      height: 50vh;
+      border-radius: 15px;
+    }
+    
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      border-radius: 15px;
+      height: 100%;
+    }
+  }
+  /* Adjust styles for tablets and smaller screens */
+  @media (max-width: 768px) {
+    .navbar1 {
+      padding: 1.2rem 5%; /* Adjust padding for smaller screens */
+    }
+  
+    .kiri .text {
+      width: 7rem; /* Adjust the width for smaller screens */
+      margin-right: 0; /* Remove right margin on smaller screens */
+    }
+  
+    .kiri .text h1 {
+      font-size: small; /* Adjust font size for smaller screens */
+    }
+  
+    .kiri .navbar-logo1 {
+      padding-right: 0.5rem; /* Adjust padding for smaller screens */
+    }
+  
+    .kiri .navbar-logo1 img {
+      width: 1.5rem; /* Adjust logo size for smaller screens */
+      height: 1.8rem;
+    }
+  
+    .navbar1 .navbar-extra1 img {
+      width: 28px; /* Adjust image size for smaller screens */
+      height: 40px;
+    }
+  
+    .navbar1 .navbar-extra1 a {
+      padding: 0.3rem; /* Adjust padding for smaller screens */
+      margin: 0.1rem; /* Adjust margins for smaller screens */
+      color: #000000;
+    }
+    .navbar1 .navbar-extra1 {
+      width: 11.5rem;
+    }
+  
+    .containerleader {
+      width: auto;
+      height: 30vh;
+      background: #e7e7e7;
+      display: flex;
+      justify-content: space-around;
+      margin-top: 1rem;
+      align-items: center;
+      padding-top: 0.5rem;
+    }
+    .containerleader .orangkiri {
+      flex-direction: column;
+      margin-left: 1rem;
+      margin-top: 1.3rem;
+      margin-bottom: 1rem;
+    }
+    .containerleader .orangkanan {
+      flex-direction: column;
+      margin-right: 1rem;
+      margin-top: 1.3rem;
+      margin-bottom: 1rem;
+      display: flex;
+  
+      right: 0;
+      justify-content: end;
+    }
+    .containerleader .container2 {
+      border-radius: 15px;
+      background: #75cda8;
+  
+      height: 21px;
+      display: flex;
+      align-items: center;
+      padding-top: 0.2rem;
+      padding-bottom: 0.2rem;
+      margin-bottom: 1.2rem;
+    }
+    .containerleader .container2 .profile {
+      width: 14px;
+      height: 14px;
+      margin-left: 0.5rem;
+      margin-right: 0.2rem;
+    }
+    .containerleader .container2 .profile img {
+      width: 16px;
+      height: 16px;
+      position: absolute;
+  
+      border-radius: 15px;
+    }
+    .containerleader .container2 .nama {
+      display: flex;
+  
+      height: 16px;
+  
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border-radius: 10px;
+      background: #fbfbfb;
+      margin-right: 0.2rem;
+    }
+    .containerleader .container2 .nama h1 {
+      font-family: Poppins;
+      font-size: 16px;
+      font-style: oblique;
+      font-weight: 500;
+      line-height: normal;
+      color: #000000;
+    }
+    .containerleader .gambartengah {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 70px;
+      height: 70px;
+    }
+    .containerleader .gambartengah img {
+      position: absolute;
+      width: 70px;
+      height: 70px;
+    }
+    .containerleader .orangkanan .container2 {
+      flex-direction: row-reverse;
+      align-items: center;
+      right: 0;
+    }
+    .containerleader .orangkanan .container2 .nama {
+      margin-right: 0rem;
+      margin-left: 0.2rem;
+      align-items: center;
+      display: flex;
+    }
+    .containerleader .orangkanan .container2 .profile {
+      margin-left: 0.2rem;
+      margin-right: 0.5rem;
+    }
+  
+    .s-box1 {
+      width: 160px;
+    }
+    .s-box1 .nama {
+      width: 155px;
+    }
+    .s-box2 {
+      width: 145px;
+    }
+    .s-box2 .nama {
+      width: 140px;
+    }
+    .s-box3 {
+      width: 130px;
+    }
+    .s-box3 .nama {
+      width: 125px;
+    }
+    .s-box4 {
+      width: 145px;
+    }
+    .s-box4 .nama {
+      width: 140px;
+    }
+    .s-box5 {
+      width: 160px;
+    }
+    .s-box5 .nama {
+      width: 155px;
+    }
+  
+    .box-1 {
+      width: 160px;
+    }
+    .box-1 .nama {
+      width: 155px;
+    }
+    .box-2 {
+      width: 145px;
+      margin-left: 15px;
+    }
+    .box-2 .nama {
+      width: 140px;
+    }
+    .box-3 {
+      width: 130px;
+      margin-left: 30px;
+    }
+    .box-3 .nama {
+      width: 125px;
+    }
+    .box-4 {
+      width: 145px;
+      margin-left: 15px;
+    }
+    .box-4 .nama {
+      width: 140px;
+    }
+    .box-5 {
+      width: 160px;
+    }
+    .box-5 .nama {
+      width: 155px;
+    }
+    .SwiperSlide img {
+      width: 80vw;
+      height: 20vh;
+    }
+    .swiper {
+      width: 80vw;
+      height: 20vh;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      gap: 10px;
+    }
+    
+    .mySwiper.swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 80vw;
+      height: 20vh;
+      border-radius: 15px;
+    }
+    
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      border-radius: 15px;
+      height: 100%;
+    }
+  }
+  
