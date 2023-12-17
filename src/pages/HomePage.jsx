@@ -1,7 +1,7 @@
+import React from "react";
 import "../dist/css/Homepage.css";
 import logosekolah from "../assets/logo562.png";
-import { Button } from "react-bootstrap";
-Button;
+import { Button, Form } from "react-bootstrap";
 
 function TombolLogin() {
   return <button className="TombolSatu">Silahkan Masuk</button>;
@@ -16,11 +16,24 @@ const HomePage = () => {
         <br />
         SELAMAT DATANG DI SD <br />
         <span className="span1">MI Ya BAKII KARANGJENGKOL</span>
-        <>
-          <Button variant="primary" size="sm" active href="Kelas"> "
-            Primary button
-          </Button>{" "}
-        </>
+
+        {/* Login Form */}
+        <Form>
+          <Form.Group controlId="formUsername">
+            <Form.Label style={{ fontWeight: 'bold' }}>Username</Form.Label>
+            <Form.Control type="text" placeholder="Enter your username" />
+          </Form.Group>
+
+          <Form.Group controlId="formPassword">
+            <Form.Label style={{ fontWeight: 'bold' }}>Password</Form.Label>
+            <Form.Control type="password" placeholder="Enter your password" />
+          </Form.Group>
+
+          {/* Updated Primary Login Button */}
+          <Button variant="primary" size="sm" active style={{ marginTop: '10px' }}>
+            Login
+          </Button>
+        </Form>
       </div>
     </div>
   );
