@@ -11,9 +11,9 @@ const Leaderbot = () => {
 
   const fetchLeaderboardData = async () => {
     try {
-      const response = await fetch('http://localhost:3000/quiz/leaderboard'); 
+      const response = await fetch('http://localhost:3000/quiz/leaderboard');
       const data = await response.json();
-      setLeaderboardData(data);
+      setLeaderboardData(data.body);
     } catch (error) {
       console.error('Error fetching leaderboard data', error);
     }
@@ -29,7 +29,8 @@ const Leaderbot = () => {
                 <img src={profile} alt="" />
               </div>
               <div className="nama">
-                <h1>{user.username}</h1>
+                {/* Update the property access to user.CreatedBy */}
+                <h1>{user.CreatedBy}</h1>
               </div>
             </div>
           ))}
@@ -44,7 +45,8 @@ const Leaderbot = () => {
                 <img src={profile} alt="" />
               </div>
               <div className="nama">
-                <h1>{user.username}</h1>
+                {/* Update the property access to user.CreatedBy */}
+                <h1>{user.CreatedBy}</h1>
               </div>
             </div>
           ))}
