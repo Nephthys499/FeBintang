@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../dist/css/Kuis.css";
+import "../CSS/Kuis.css";
 
 const KuisPage = () => {
   const [quizData, setQuizData] = useState(null);

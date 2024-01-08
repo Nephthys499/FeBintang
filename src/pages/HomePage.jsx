@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../dist/css/Homepage.css";
+import "../CSS/Homepage.css";
 import logosekolah from "../assets/logo562.png";
 import { Button, Form } from "react-bootstrap";
 

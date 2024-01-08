@@ -9,6 +9,11 @@ import TestimonialPage from "./pages/TestimonialPage";
 import FaqPage from "./pages/FaqPage";
 import SyaratKetenPage from "./pages/SyaratKetenPage";
 import KuisPage from "./pages/KuisPage";
+import MatematikaPage from "./pages/MatematikaPage";
+import IpaPage from "./pages/IpaPage";
+import IpsPage from "./pages/IpsPage";
+import PknPage from "./pages/PknPage";
+import BahasaPage from "./pages/BahasaPage";
 
 function App() {
   return (
@@ -20,6 +25,11 @@ function App() {
         <Route path="/Faq" Component={FaqPage} />
         <Route path="/Syaratketen" Component={SyaratKetenPage} />
         <Route path="/Kuis" Component={KuisPage} />
+        <Route path="/Matematika" Component={MatematikaPage} />
+        <Route path="/Ipa" Component={IpaPage} />
+        <Route path="/Ips" Component={IpsPage} />
+        <Route path="/Pkn" Component={PknPage} />
+        <Route path="/Bahasa" Component={BahasaPage} />
       </Routes>
     </div>
   );
