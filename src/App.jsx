@@ -8,6 +8,7 @@ import KelasPage from "./pages/KelasPage";
 import TestimonialPage from "./pages/TestimonialPage";
 import FaqPage from "./pages/FaqPage";
 import SyaratKetenPage from "./pages/SyaratKetenPage";
+import KuisPage from "./pages/KuisPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/Testimonial" Component={TestimonialPage} />
         <Route path="/Faq" Component={FaqPage} />
         <Route path="/Syaratketen" Component={SyaratKetenPage} />
+        <Route path="/Kuis" Component={KuisPage} />
       </Routes>
     </div>
   );

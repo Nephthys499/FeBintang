@@ -30,6 +30,7 @@ const HomePage = () => {
           // Login berhasil, sesuaikan tindakan Anda di sini
           setLoginData(data.body);
           console.log("Login berhasil");
+          window.location.href = "/kelas";
         } else {
           // Login gagal, sesuaikan tindakan Anda di sini
           console.log("Login gagal: ", data.message);
