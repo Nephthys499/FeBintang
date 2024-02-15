@@ -195,13 +195,25 @@
   .contact h2 span {
     color: #1e5754;
   }
-.contact .container1 {
+.contact .container3 {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
-
+.contact .container3 .mapel1 {
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+border-style:  groove;
+max-width: 20.2vw;
+}
+.contact .container3 .mapel1 .gambar img{
+width: 20vw;
+height: 20vh;
+}
 .contact .container1 .row {
   text-align: center;
   width: 30%;

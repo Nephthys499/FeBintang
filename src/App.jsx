@@ -24,7 +24,7 @@ function App() {
         <Route path="/Testimonial" Component={TestimonialPage} />
         <Route path="/Faq" Component={FaqPage} />
         <Route path="/Syaratketen" Component={SyaratKetenPage} />
-        <Route path="/Kuis" Component={KuisPage} />
+        <Route path="/kuis/:quizId" Component={KuisPage} />
         <Route path="/Matematika" Component={MatematikaPage} />
         <Route path="/Ipa" Component={IpaPage} />
         <Route path="/Ips" Component={IpsPage} />

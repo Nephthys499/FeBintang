@@ -1,22 +1,50 @@
+// KuisPage.js
+
 import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import "../CSS/Kuis.css";
 
 const KuisPage = () => {
   const [quizData, setQuizData] = useState(null);
+  const [selectedOptions, setSelectedOptions] = useState({});
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const { quizId } = useParams();
 
   useEffect(() => {
     const fetchQuizData = async () => {
       try {
-        const response = await fetch("http://localhost:3000/quiz/detail/1");
+        const response = await fetch(
+          `http://localhost:3000/quiz/detail/${quizId}`
+        );
         const data = await response.json();
         setQuizData(data.body[0]);
+        console.log(data.body[0]);
       } catch (error) {
         console.error("Error fetching quiz data:", error);
       }
     };
 
     fetchQuizData();
-  }, []);
+  }, [quizId]);
+
+  const handleOptionChange = (questionId, optionId) => {
+    setSelectedOptions(prevSelectedOptions => ({
+      ...prevSelectedOptions,
+      [questionId]: optionId,
+    }));
+  };
+
+  const isOptionSelected = (questionId, optionId) => {
+    return selectedOptions[questionId] === optionId;
+  };
+
+  const handleNext = () => {
+    setCurrentQuestionIndex(prevIndex => prevIndex + 1);
+  };
+
+  const handlePrevious = () => {
+    setCurrentQuestionIndex(prevIndex => prevIndex - 1);
+  };
 
   const handleSubmit = async event => {
     event.preventDefault();
@@ -74,23 +102,41 @@ const KuisPage = () => {
   };
 
   return (
-    <div>
-      {quizData ? (
+    <div className="quiz-container">
+      {quizData && quizData.quizQuestions.length > 0 ? (
         <div>
           <h1>{quizData.Title}</h1>
-          <p>Time Limit: {quizData.TimeLimit} seconds</p>
+          <p>
+            Question {currentQuestionIndex + 1} of{" "}
+            {quizData.quizQuestions.length}
+          </p>
           <form onSubmit={handleSubmit}>
-            {quizData.quizQuestions.map(question => (
-              <div key={question.Id}>
-                <p>{question.Question}</p>
-                <ul>
+            {quizData.quizQuestions.map((question, index) => (
+              <div
+                key={question.Id}
+                style={{
+                  display: index === currentQuestionIndex ? "block" : "none",
+                }}
+              >
+                <p className="quiz-question">{question.Question}</p>
+                <ul className="quiz-options">
                   {question.quizQuestionDetails.map(option => (
-                    <li key={option.Id}>
+                    <li
+                      key={option.Id}
+                      className={`quiz-option ${
+                        isOptionSelected(question.Id, option.Id)
+                          ? "selected"
+                          : ""
+                      }`}
+                    >
                       <label>
                         <input
                           type="radio"
                           name={`question_${question.Id}`}
                           value={option.Id}
+                          onChange={() =>
+                            handleOptionChange(question.Id, option.Id)
+                          }
                         />
                         {option.Description}
                       </label>
@@ -98,11 +144,32 @@ const KuisPage = () => {
                   ))}
                 </ul>
                 {question.isCorrect !== undefined && (
-                  <p>{question.isCorrect ? "Correct" : "Incorrect"}</p>
+                  <p
+                    className={`quiz-feedback ${
+                      question.isCorrect ? "" : "incorrect"
+                    }`}
+                  >
+                    {question.isCorrect ? "Correct" : "Incorrect"}
+                  </p>
                 )}
               </div>
             ))}
-            <button type="submit">Submit</button>
+            <div className="quiz-nav-buttons">
+              {currentQuestionIndex > 0 && (
+                <button type="button" onClick={handlePrevious}>
+                  Previous
+                </button>
+              )}
+              {currentQuestionIndex === quizData.quizQuestions.length - 1 ? (
+                <button className="quiz-submit-button" type="submit">
+                  Submit
+                </button>
+              ) : (
+                <button type="button" onClick={handleNext}>
+                  Next
+                </button>
+              )}
+            </div>
           </form>
         </div>
       ) : (

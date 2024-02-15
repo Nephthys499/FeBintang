@@ -1,32 +1,26 @@
 import React from "react";
-import math from "../assets/think.png";
+import math from "../assets/Math1.jpg";
 import ipa from "../assets/microscope.png";
 import bi from "../assets/open-book.png";
 const MenuMapel = () => {
   return (
     <div>
-      <section class="contact" id="contact">
+      <section className="contact" id="contact">
         <h2>
           <span>Mata </span>Pelajaran
         </h2>
-        <div class="container1">
-          <div class="row">
-            <img src={math} alt="" />
-            <h3>Matematika</h3>
-          </div>
-          <div class="row">
-            <img src={ipa} alt="" />
-            <h3>IPA</h3>
-          </div>
-          <div class="row">
-            <img src={bi} alt="" />
-            <h3>Bahasa Indonesia</h3>
-          </div>
-          <div class="row">
-            <h3>lorem</h3>
-          </div>
-          <div class="row">
-            <h3>lorem</h3>
+        <div className="container3">
+          <div className="mapel1">
+            <div className="gambar">
+              <img src={math} alt="" />
+            </div>
+            <div className="text">
+              <h2>Matematika</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Voluptate rerum et tempore corrupti dolore saepe.
+              </p>
+            </div>
           </div>
         </div>
       </section>
