@@ -67,6 +67,10 @@ body {
 .quiz-feedback.incorrect {
   color: red; /* Warna jawaban salah */
 }
+.quiz-nav-buttons{
+  display: flex;
+  justify-content: space-between;
+}
 
 
 button {

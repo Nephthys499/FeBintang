@@ -36,7 +36,8 @@ const CroselApp = () => {
         pagination={{ clickable: true }}
         onSlideChange={() => console.log("slide change")}
         onSwiper={swiper => console.log(swiper)}
-        className="mySwiper">
+        className="mySwiper"
+      >
         <SwiperSlide>
           <img src="https://swiperjs.com/demos/images/nature-1.jpg" alt="" />
         </SwiperSlide>

@@ -16,7 +16,7 @@ function MatematikaPage() {
         );
         const data = await response.json();
         setMateriData(data.body);
-        console.log(data.body);
+        console.log(data);
       } catch (error) {
         console.error("Error fetching materi data:", error);
       }
@@ -45,8 +45,8 @@ function MatematikaPage() {
         <div>
           <h1>{materiData.Title}</h1>
           <p
-            onClick={handleMateriTitleClick(materiData)}
-            style={{ cursor: "pointer" }}
+          // onClick={handleMateriTitleClick(materiData)}
+          // style={{ cursor: "pointer" }}
           >
             {materiData.Content}
           </p>
@@ -58,8 +58,8 @@ function MatematikaPage() {
                 <div key={child.Name}>
                   <h3>{child.Title}</h3>
                   <p
-                    onClick={handleMateriTitleClick(child)}
-                    style={{ cursor: "pointer" }}
+                  // onClick={handleMateriTitleClick(child)}
+                  // style={{ cursor: "pointer" }}
                   >
                     {child.Content}
                   </p>
